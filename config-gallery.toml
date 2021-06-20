@@ -1,25 +1,14 @@
-baseURL = "https://blog.eleuther.ai/"
-languageName = "English"
+baseURL = "https://gallery.eleuther.ai/"
 languageCode = "en-us"
-title = "EleutherAI Blog"
+title = "EleutherAI Gallery"
 theme = "eai-theme"
-contentDir = "content-blog"
-publishDir="public-blog"
+contentDir = "content-gallery"
+publishDir="public-gallery"
 [params]
     logo="EleutherAI"
     logo_image_url="images/eai_logo.png"
     contact_mail="contact@eleuther.ai"
-    site_type="blog"
-    sitename = "EleutherAI"
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
-  [markup.highlight]
-    style = "solarized-light"
-[taxonomies]
-  category = "categories"
-  tags = "tags"
+    site_type="gallery"
 [menu]
   [[menu.main]]
     name = "Home"
@@ -35,7 +24,7 @@ publishDir="public-blog"
     weight = 3
   [[menu.main]]
     name = "Blog"
-    url = "/"
+    url = "https://blog.eleuther.ai"
     weight = 4
   [[menu.main]]
     name = "Publications"
@@ -43,7 +32,7 @@ publishDir="public-blog"
     weight = 5
   [[menu.main]]
     name = "Gallery"
-    url = "https://gallery.eleuther.ai"
+    url = "/"
     weight = 6
   [[menu.main]]
     name = "Get Involved"

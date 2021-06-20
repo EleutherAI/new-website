@@ -266,6 +266,27 @@ a .logo-text {
   margin-right: 0;
 }
 
+.gallery-section {
+  margin-top: 1.4em;
+}
+
+.gallery-section ul {
+  margin-left: 0;
+  margin-top: 1.5em;
+  width: 100%;
+  list-style-type: none;
+}
+
+.gallery-section ul li {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0em 1em 1em 0em;
+  list-style-type: none;
+  display: inline-block;
+  width: 300px;
+  vertical-align: top;
+}
+
 .announcement-section {
   margin-top: 1.4em;
 }

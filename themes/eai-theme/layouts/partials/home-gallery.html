@@ -1,0 +1,24 @@
+<div class="main-container">
+    <div class="content-wrapper">
+        <div class="grid-1-1">
+            <div class="page-content">
+                <div class="description">
+                    {{ .Content }}
+                </div>
+                <div class="gallery-section">
+                    <ul>
+                        {{ range .Site.RegularPages }}
+                        <li>
+                            {{ $image := ( .Resources.GetMatch "image.jpg" ).Resize "x300" }}
+                            <img src="{{ $image.RelPermalink }}" width="300" height="300" />
+                            <p>"{{- plainify (trim .Content "\n") -}}"</p>
+                            <p>@{{.Params.author}}</p>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
