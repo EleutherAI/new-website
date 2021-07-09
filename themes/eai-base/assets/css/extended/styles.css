@@ -14,6 +14,10 @@
   font-weight: normal;
 }
 
+article.first-entry.home-info {
+  min-height: auto;
+}
+
 article.first-entry.home-info > header > h1{
   font-family: 'Eleuther', sans-serif;
   font-weight: normal;
@@ -36,7 +40,7 @@ header.header > nav.nav > div.logo > a+span button,header.header > nav.nav a{
 
 header.header > nav.nav > div.logo > a > img {
   position: relative;
-  bottom: -4px;
+  bottom: 4px;
 }
 
 article.announcement-section > dl > dt > time {

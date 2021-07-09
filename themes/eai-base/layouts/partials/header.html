@@ -84,39 +84,10 @@
                 <img src="{{- .Site.Params.label.icon -}}" alt="logo" aria-label="logo"
                 width="{{- (.Site.Params.label.iconHeight) }}" height="{{- .Site.Params.label.iconHeight -}}">
                 {{- end -}}
-                {{- $label_text -}}
+                <span class="logo-text">{{- $label_text -}}</span>
             </a>
             {{- end }}
-            <span class="logo-switches">
-                {{- if (not .Site.Params.disableThemeToggle) }}
-                <button id="theme-toggle" accesskey="t" title="Theme Toggle (Alt + T)">
-                    <span id="moon">◖</span>
-                    <span id="sun">◗</span>
-                </button>
-                {{- end }}
 
-                {{- $lang := .Lang}}
-                {{- $separator := or $label_text (not .Site.Params.disableThemeToggle)}}
-                {{- with $.Site.Home.AllTranslations }}
-                <ul class="lang-switch">
-                    {{- if $separator }}<li>|</li>{{ end }}
-                    {{- range . -}}
-                    {{- if ne $lang .Lang }}
-                    <li>
-                        <a href="{{- .Permalink -}}" title="{{ .Language.Params.languageAltTitle | default (.Language.LanguageName | emojify) | default (.Lang | title) }}"
-                            aria-label="{{ .Language.LanguageName | default (.Lang | title) }}">
-                            {{- if (and $.Site.Params.displayFullLangName (.Language.LanguageName)) }}
-                            {{- .Language.LanguageName | emojify -}}
-                            {{- else }}
-                            {{- .Lang | title -}}
-                            {{- end -}}
-                        </a>
-                    </li>
-                    {{- end -}}
-                    {{- end}}
-                </ul>
-                {{- end }}
-            </span>
         </div>
         {{- $currentPage := . }}
         <ul id="menu">
@@ -136,5 +107,35 @@
             </li>
             {{- end }}
         </ul>
+        <div class="logo-switches">
+            {{- if (not .Site.Params.disableThemeToggle) }}
+            <button id="theme-toggle" accesskey="t" title="Theme Toggle (Alt + T)">
+                <span id="moon"> <img src="/images/dark-mode-icon.svg" alt="Dark mode icon" /></span>
+                <span id="sun"><img src="/images/light-mode-icon.svg" alt="Light mode icon" /></span>
+            </button>
+            {{- end }}
+
+            {{- $lang := .Lang}}
+            {{- $separator := or $label_text (not .Site.Params.disableThemeToggle)}}
+            {{- with $.Site.Home.AllTranslations }}
+            <ul class="lang-switch">
+                {{- if $separator }}<li>|</li>{{ end }}
+                {{- range . -}}
+                {{- if ne $lang .Lang }}
+                <li>
+                    <a href="{{- .Permalink -}}" title="{{ .Language.Params.languageAltTitle | default (.Language.LanguageName | emojify) | default (.Lang | title) }}"
+                        aria-label="{{ .Language.LanguageName | default (.Lang | title) }}">
+                        {{- if (and $.Site.Params.displayFullLangName (.Language.LanguageName)) }}
+                        {{- .Language.LanguageName | emojify -}}
+                        {{- else }}
+                        {{- .Lang | title -}}
+                        {{- end -}}
+                    </a>
+                </li>
+                {{- end -}}
+                {{- end}}
+            </ul>
+            {{- end }}
+        </div>
     </nav>
 </header>

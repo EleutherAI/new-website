@@ -19,7 +19,7 @@ googleAnalytics = "G-9KCLV8BK53"
     ShowAllPagesInArchive = true
     [params.label]
         icon = "/images/libre.svg"
-        iconHeight = "45px"
+        iconHeight = "33"
     [params.assets]
         disableHLJS = true
         favicon="favicon.ico"

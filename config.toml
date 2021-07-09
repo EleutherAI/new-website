@@ -32,7 +32,7 @@ googleAnalytics = "G-9KCLV8BK53"
         url="https://github.com/EleutherAI"
     [params.label]
         icon = "/images/libre.svg"
-        iconHeight = "45"
+        iconHeight = "33"
     [params.assets]
         disableHLJS = true
         favicon="favicon.ico"
